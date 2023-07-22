@@ -60,6 +60,9 @@ void shell_sort(int array[], size_t size)
 {
 	size_t step = knuth_sequence(size);
 
+	if (!array || size < 2)
+		return;
+
 	while (step > 0)
 	{
 		insertion_sort(array, size, step);
