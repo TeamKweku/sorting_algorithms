@@ -14,6 +14,9 @@ void counting_sort(int *array, size_t size)
 	int i, k = 0, n = size;
 	int *count, *sorted;
 
+	if (!array || size < 2)
+		return;
+
 	for (i = 0; i < n; i++)
 	{
 		if (array[i] > k)
