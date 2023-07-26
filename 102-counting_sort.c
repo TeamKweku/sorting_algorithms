@@ -16,18 +16,14 @@ void counting_sort(int *array, size_t size)
 
 	if (!array || size < 2)
 		return;
-
 	for (i = 0; i < n; i++)
 	{
 		if (array[i] > k)
 			k = array[i];
 	}
-
 	count = malloc((k + 1) * sizeof(int));
 	if (!count)
 		return;
-
-
 	for (i = 0; i <= k; i++)
 		count[i] = 0;
 	for (i = 0; i < n; i++)
@@ -49,7 +45,6 @@ void counting_sort(int *array, size_t size)
 	}
 	for (i = 0; i < n; i++)
 		array[i] = sorted[i];
-
 	free(count);
 	free(sorted);
 }
